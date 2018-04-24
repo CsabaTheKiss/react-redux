@@ -7,6 +7,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.STORE_RESULT:
+        console.log('result reducer STORE_RESULT, action: ', action);
             return { 
                 ...state,
                 results: state.results.concat({id: new Date() + Math.random(), value: action.resultToStore}) 
