@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
                 results: state.results.concat({id: new Date() + Math.random(), value: action.resultToStore}) 
             };
         case actionTypes.DELETE_RESULT:
-        const updatedArray = state.results.filter(result => result.id !== action.id)
+            const updatedArray = state.results.filter(result => result.id !== action.id)
             return {
                 ...state,
                 results: updatedArray
